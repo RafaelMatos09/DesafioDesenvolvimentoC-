@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "PokeApi.Controllers.PokemonController",
+    "Method": "BuscarPokemonPorRegiao",
+    "RelativePath": "api/Pokemon/BuscarPokemonPorRegiao/{idRegiao}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idRegiao",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PokeApi.Models.ResponseModel\u00601[[PokeApi.Models.RegiaoModel, PokeApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PokeApi.Controllers.PokemonController",
+    "Method": "ListarPokemons",
+    "RelativePath": "api/Pokemon/ListarPokemons",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "PokeApi.Models.ResponseModel\u00601[[System.Collections.Generic.List\u00601[[PokeApi.Models.PokemonModel, PokeApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

@@ -12,6 +12,15 @@ namespace PokeApi.Data
         }
 
         public DbSet<PokemonModel> Pokemons { get; set; }
-        public DbSet<TipoModel> Tipos { get; set; }
+        public DbSet<RegiaoModel> Regioes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            
+            modelBuilder.Entity<PokemonModel>()
+                .HasOne(p => p.Regiao) 
+                .WithMany(r => r.Pokemon) 
+                .HasForeignKey(p => p.RegiaoId); 
+        }
     }
 }

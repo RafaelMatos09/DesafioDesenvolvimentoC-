@@ -5,11 +5,12 @@ namespace PokeApi.Models
     public class PokemonModel
     {
         public int Id { get; set; }
-        public string Nome { get; set; }        
+        public string Pokemon { get; set; }
+        public string tipo { get; set; }
         public string Status { get; set; }
         public string Fraquesas { get; set; }
         public string PontosFortes { get; set; }
-        [JsonIgnore]
-        public ICollection<TipoModel> Tipo {  get; set; }
+        public int RegiaoId { get; set; }
+        public RegiaoModel Regiao { get; set; } 
     }
 }

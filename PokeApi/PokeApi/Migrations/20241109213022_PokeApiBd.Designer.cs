@@ -11,8 +11,8 @@ using PokeApi.Data;
 namespace PokeApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241108225309_CreateBd")]
-    partial class CreateBd
+    [Migration("20241109213022_PokeApiBd")]
+    partial class PokeApiBd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,7 +36,7 @@ namespace PokeApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Pokemon")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -44,16 +44,25 @@ namespace PokeApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RegiaoId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("tipo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RegiaoId");
+
                     b.ToTable("Pokemons");
                 });
 
-            modelBuilder.Entity("PokeApi.Models.TipoModel", b =>
+            modelBuilder.Entity("PokeApi.Models.RegiaoModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -61,34 +70,29 @@ namespace PokeApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("NomeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Tipo")
+                    b.Property<string>("Regiao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NomeId");
-
-                    b.ToTable("Tipos");
-                });
-
-            modelBuilder.Entity("PokeApi.Models.TipoModel", b =>
-                {
-                    b.HasOne("PokeApi.Models.PokemonModel", "Nome")
-                        .WithMany("Tipo")
-                        .HasForeignKey("NomeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Nome");
+                    b.ToTable("Regioes");
                 });
 
             modelBuilder.Entity("PokeApi.Models.PokemonModel", b =>
                 {
-                    b.Navigation("Tipo");
+                    b.HasOne("PokeApi.Models.RegiaoModel", "Regiao")
+                        .WithMany("Pokemon")
+                        .HasForeignKey("RegiaoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Regiao");
+                });
+
+            modelBuilder.Entity("PokeApi.Models.RegiaoModel", b =>
+                {
+                    b.Navigation("Pokemon");
                 });
 #pragma warning restore 612, 618
         }
