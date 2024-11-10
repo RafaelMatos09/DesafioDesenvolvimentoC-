@@ -1,15 +1,14 @@
 <h1 align="center">Desafio De Desenvolvimento</h1>
 
-<h1 align="center">
-    <img src="[https://melhor-hospedagem-sites.net/wp/wp-content/uploads/2024/06/Node.js-logo.png" alt="Node.js Logo](https://static-00.iconduck.com/assets.00/c-icon-1820x2048-5g8nvybk.png)">
-</h1>
 
 <h1 align="center">
     <img src="http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUIDO&color=GREEN&style=for-the-badge" alt="Status: Concluído">
 </h1>
 
 <h2 align="left">📖 Descrição</h2>
-<p>O objetivo deste desafio é desenvolver um sistema básico de CRUD (Create, Read, Update, Delete) para gerenciar uma lista de itens, utilizando HTML para a interface do usuário e Node.js para o backend.</p>
+<p>O objetivo deste desafio é desenvolver uma aplicação que consuma a PokeAPI e exiba dados
+relacionados aos Pokémon de diferentes regiões. O desenvolvedor deverá trabalhar tanto no
+backend, utilizando C#, quanto no frontend, com React.js.</p>
 
 <p align="center">
     <video src="https://github.com/user-attachments/assets/1382763f-f44b-4fb6-bb7f-e4086b4801ab" controls>
