@@ -18,8 +18,8 @@ namespace PokeApi.Controllers
         [HttpGet("ListarPokemons")]
         public async Task<ActionResult<ResponseModel<List<PokemonModel>>>> ListarPokemons()
         {
-            var regioes = await _pokemonInterface.ListarPokemons();
-            return Ok(regioes);
+            var pokemons = await _pokemonInterface.ListarPokemons();
+            return Ok(pokemons);
         }
 
         [HttpGet("BuscarPokemonPorRegiao/{idRegiao}")]

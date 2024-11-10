@@ -1,11 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using PokeApi.Data;
+using PokeApi.Services.Regiao;
 using PokeApi.Services.Tipo;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -13,6 +24,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<PokemonInterface, PokemonService>();
+builder.Services.AddScoped<RegiaoInterface, RegiaoService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -31,6 +43,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("AllowAllOrigins");
 
 app.MapControllers();
 
