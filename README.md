@@ -10,7 +10,11 @@ relacionados aos Pokémon de diferentes regiões. O desenvolvedor deverá trabal
 backend, utilizando C#, quanto no frontend, com React.js.</p>
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/82dc83c2-8bc9-4a10-a8db-dc4447ccf7c2" alt="Imagem da Aplicação">
+    
+
+https://github.com/user-attachments/assets/95941423-77e8-4c10-8657-ba2348eb8dd9
+
+
 </p>
 
 <h2 align="left">:hammer: Funcionalidades</h2>
