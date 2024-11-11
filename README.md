@@ -49,6 +49,12 @@ https://github.com/user-attachments/assets/95941423-77e8-4c10-8657-ba2348eb8dd9
 
 4. **Banco de Dados (SQLServer)**:
     - A aplicação utiliza o SQLServer da Microsoft. As migrações configuradas no projeto permitirão que o banco de dados seja criado automaticamente a partir dos modelos da API.
+    - Para criar o banco de dados abra **Ferramentas > Gerenciador de Pacotes NuGet > Console do Gerenciador de Pacotes**
+       -> Criar as tabelas do banco com migration
+              Digite no console \/
+           ```add-migration PokeApiBD  ```
+              update-database                     
+           ```                         ```
 
 <h2 align="left">🧑 Tecnologias utilizadas</h2>
 <ul>
