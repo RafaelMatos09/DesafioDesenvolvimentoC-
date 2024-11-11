@@ -70,7 +70,7 @@ https://github.com/user-attachments/assets/95941423-77e8-4c10-8657-ba2348eb8dd9
 </ul>
 
 <h2 align="left">📌 Conclusão</h2>
-<p>O projeto foi desenvolvido com sucesso, proporcionando uma interface funcional e responsiva que permite ao usuário explorar Pokémon de diferentes regiões e visualizar detalhes específicos sobre cada um. Esta aplicação demonstra o uso de tecnologias modernas e a integração de uma API pública, explorando conceitos de front-end com React e backend em C# com Entity Framework. Além disso, a arquitetura de projeto e o uso de banco de dados SQLServer garantem escalabilidade e fácil manutenção.</p>
+<p>O projeto foi desenvolvido com sucesso, oferecendo uma interface funcional e responsiva que permite ao usuário explorar Pokémon de diferentes regiões e visualizar detalhes específicos sobre cada um.</p>
 
-<p>Este desafio foi uma excelente oportunidade para praticar o desenvolvimento full-stack e aprimorar habilidades de integração de APIs, desenvolvimento orientado a objetos, e manipulação de dados em SQLServer. O uso de modais para detalhes oferece uma experiência mais rica ao usuário, enquanto a organização do código no frontend e backend assegura um desempenho consistente e uma boa base para futuras extensões.</p>
+<p>Este desafio foi uma excelente oportunidade para praticar o desenvolvimento full-stack, aprimorar habilidades de integração de APIs e demonstrar minha experiência com estas tecnologias. Agradeço pela oportunidade de compartilhar um pouco do meu trabalho e aprender com este projeto.</p>
 
