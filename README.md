@@ -52,9 +52,8 @@ https://github.com/user-attachments/assets/95941423-77e8-4c10-8657-ba2348eb8dd9
     - Para criar o banco de dados abra **Ferramentas > Gerenciador de Pacotes NuGet > Console do Gerenciador de Pacotes**
        <br>-> Criar as tabelas do banco com migration<br>
               <br>Digite no console \/<br>
-           ```add-migration PokeApiBD  ```
-                                  
-           ```update-database ```                        
+           ```add-migration PokeApiBD  update-database ```                                 
+                                    
 
 <h2 align="left">🧑 Tecnologias utilizadas</h2>
 <ul>
